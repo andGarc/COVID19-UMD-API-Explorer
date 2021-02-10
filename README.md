@@ -1,6 +1,6 @@
 # COVID-19 World Survey Data API Explorer
 
-Explorer app to visualize the indicator results from the [COVID-19 World Symtoms Survey](https://covidmap.umd.edu/)
+Explorer app to visualize the indicator results from the [COVID-19 World Symtoms Survey.](https://covidmap.umd.edu/)
 
 ## Usage
 1. Pick a Start Date

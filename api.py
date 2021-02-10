@@ -45,7 +45,6 @@ def make_chart(df, pct, selector):
 
 # -- start of sidebar --
 st.sidebar.markdown('## UMD COVID-19 Open Data API Explorer')
-
 start = st.sidebar.date_input("Start:")
 end = st.sidebar.date_input("End:")
 
@@ -54,14 +53,31 @@ indicator = st.sidebar.multiselect('Select indicator', ['covid', 'flu', 'mask', 
                                             'concerned_sideeffects', 'hesitant_sideeffects', 'modified_acceptance', 'access_wash', 
                                             'wash_hands_24h_3to6', 'wash_hands_24h_7orMore', 'cmty_covid'])
 
-country = st.sidebar.multiselect("Select countries", get_countries().country.tolist())
+option = st.sidebar.checkbox("Select all countires")
+
+if option:
+    all all_countries = get_countries().country.tolist()
+else:
+    country = st.sidebar.multiselect("Select countries", get_countries().country.tolist())
 
 st.sidebar.markdown('Data from UMD COVID-19 World Survey Data [API](https://covidmap.umd.edu/api.html)')
 # -- end of sidebar --
 
 
+if start and end and indicator and option:
+    df_list = []
+    for c in all_countries:
+        tmp_df = get_API_data(start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), indicator[0], c)
+        df_list.append(tmp_df)
 
-if start and end and indicator and country:
+    fin = pd.concat(df_list, ignore_index=True)
+    print(fin)
+
+    chart = make_chart(fin, fin.columns[0], multi)
+    st.altair_chart(chart, use_container_width=True)
+    st.dataframe(fin)
+
+elif start and end and indicator and country:
     print(start, end, indicator, country)
 
     df = get_API_data(start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), indicator[0], country[0])
@@ -90,8 +106,6 @@ if start and end and indicator and country:
             chart = make_chart(fin, fin.columns[0], multi)
             st.altair_chart(chart, use_container_width=True)
             st.dataframe(fin)
-
-
 else:
     st.write("Something is missing! Check fields!")
 

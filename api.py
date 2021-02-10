@@ -56,7 +56,7 @@ indicator = st.sidebar.multiselect('Select indicator', ['covid', 'flu', 'mask', 
 option = st.sidebar.checkbox("Select all countires")
 
 if option:
-    all all_countries = get_countries().country.tolist()
+    all_countries = get_countries().country.tolist()
 else:
     country = st.sidebar.multiselect("Select countries", get_countries().country.tolist())
 

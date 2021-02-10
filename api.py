@@ -10,7 +10,7 @@ from datetime import datetime
 PATH = "/Users/andresgarcia/Downloads/gsw1/"
 
 
-st.title("COVID-19 World Symptom Survey Open API Explorer")
+st.title("COVID-19 World Symptoms Survey Open API Explorer")
 # selection of type "multiple" for alt charts
 multi = alt.selection_multi() 
 

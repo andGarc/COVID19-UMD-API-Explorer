@@ -51,7 +51,9 @@ end = st.sidebar.date_input("End:")
 indicator = st.sidebar.multiselect('Select indicator', ['covid', 'flu', 'mask', 'contact', 'finance', 'anosmia', 'vaccine_acpt', 'covid_vaccine', 
                                             'trust_fam', 'trust_healthcare', 'trust_who', 'trust_govt', 'trust_politicians', 'twodoses',
                                             'concerned_sideeffects', 'hesitant_sideeffects', 'modified_acceptance', 'access_wash', 
-                                            'wash_hands_24h_3to6', 'wash_hands_24h_7orMore', 'cmty_covid'])
+                                            'wash_hands_24h_3to6', 'wash_hands_24h_7orMore', 'cmty_covid', 
+                                            'hes_side_effects', 'hes_wontwork', 'hes_dontbelieve', 'hes_dontlike', 'hes_waitlater', 'hes_otherpeople',
+                                            'hes_cost', 'hes_religious', 'hes_other', 'trust_doctors'	])
 
 option = st.sidebar.checkbox("Select all countires")
 

@@ -53,7 +53,13 @@ indicator = st.sidebar.multiselect('Select indicator', ['covid', 'flu', 'mask', 
                                             'concerned_sideeffects', 'hesitant_sideeffects', 'modified_acceptance', 'access_wash', 
                                             'wash_hands_24h_3to6', 'wash_hands_24h_7orMore', 'cmty_covid', 
                                             'hes_side_effects', 'hes_wontwork', 'hes_dontbelieve', 'hes_dontlike', 'hes_waitlater', 'hes_otherpeople',
-                                            'hes_cost', 'hes_religious', 'hes_other', 'trust_doctors'	])
+                                            'hes_cost', 'hes_religious', 'hes_other', 'trust_doctors', 
+                                            'barrier_reason_dontneed_alreadyhad', 'barrier_reason_dontneed_dontspendtime', 'barrier_reason_dontneed_nothighrisk', 
+                                            'barrier_reason_dontneed_takeprecautions', 'barrier_reason_dontneed_notserious', 
+                                            'barrier_reason_dontneed_notbeneficial', 'barrier_reason_dontneed_other', 'informed_access', 
+                                            'appointment_have', 'appointment_tried', 'barrier_reason_government', 'work_outside_home_1d', 'shop_1d', 
+                                            'restaurant_1d', 'spent_time_1d', 'large_event_1d', 'public_transit_1d', 'food_security', 'anxious_7d', 
+                                            'depressed_7d', 'worried_become_ill'])
 
 option = st.sidebar.checkbox("Select all countires")
 

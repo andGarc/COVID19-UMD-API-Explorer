@@ -5,9 +5,6 @@ import altair as alt
 import requests
 import json
 from datetime import datetime
-#test
-# Path to where fiels are, change if needed
-PATH = "/Users/andresgarcia/Downloads/gsw1/"
 
 
 st.title("COVID-19 World Symptoms Survey Open API Explorer")

@@ -6,9 +6,6 @@ import requests
 import json
 from datetime import datetime
 
-# Path to where fiels are, change if needed
-PATH = "/Users/andresgarcia/Downloads/gsw1/"
-
 
 st.title("COVID-19 World Symptoms Survey Open API Explorer")
 # selection of type "multiple" for alt charts
